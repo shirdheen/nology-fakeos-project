@@ -147,6 +147,28 @@ main {
   #weatherForm {
     display: flex;
     flex-direction: column;
+    #goButton {
+      width: 30%;
+      margin: 10px;
+      margin-left: 0;
+      background-color: #094337;
+      color: #e4f0ca;
+      font-family: "DynaPuff", serif;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: larger;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        background-color: #e4f0ca;
+        color: #094337;
+      }
+    }
+    .button-container {
+      display: flex;
+      justify-content: center;
+    }
   }
   label {
     margin: 5px;
@@ -160,6 +182,14 @@ main {
     height: 20px;
     border: solid #094337;
     color: #094337;
+  }
+  #weatherData {
+    display: none;
+    background-color: #e77b78;
+    color: #e4f0ca;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 

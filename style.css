@@ -151,6 +151,28 @@ main {
   display: flex;
   flex-direction: column;
 }
+.modal-content #weatherForm #goButton {
+  width: 30%;
+  margin: 10px;
+  margin-left: 0;
+  background-color: #094337;
+  color: #e4f0ca;
+  font-family: "DynaPuff", serif;
+  border-radius: 10px;
+  padding: 5px;
+  font-size: larger;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+.modal-content #weatherForm #goButton:hover {
+  transform: scale(1.1);
+  background-color: #e4f0ca;
+  color: #094337;
+}
+.modal-content #weatherForm .button-container {
+  display: flex;
+  justify-content: center;
+}
 .modal-content label {
   margin: 5px;
   font-size: 1.25em;
@@ -163,6 +185,14 @@ main {
   height: 20px;
   border: solid #094337;
   color: #094337;
+}
+.modal-content #weatherData {
+  display: none;
+  background-color: #e77b78;
+  color: #e4f0ca;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .close {
