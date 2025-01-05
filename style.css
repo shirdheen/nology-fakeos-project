@@ -17,18 +17,15 @@ main {
   align-items: center;
   height: calc(100vh - 80px);
 }
-
-.logo-container {
+.wallpaper .logo-container {
   text-align: center;
 }
-
-.logo-img {
+.wallpaper .logo-container .logo-img {
   width: 200px;
   height: auto;
   border-radius: 20px;
 }
-
-.logo-text {
+.wallpaper .logo-container .logo-text {
   margin-top: 10px;
   font-family: "DynaPuff", serif;
   font-size: 2em;
@@ -40,14 +37,12 @@ main {
   background-color: #f9dc54;
   padding: 10px;
 }
-
-.menu-container {
+.bottom-bar .menu-container {
   display: flex;
   justify-content: left;
   align-items: center;
 }
-
-.menu {
+.bottom-bar .menu-container .menu {
   border: 1px solid #094337;
   font-family: "DynaPuff", serif;
   background-color: #094337;
@@ -56,23 +51,32 @@ main {
   font-size: 1.5em;
   height: 50%;
 }
-.menu:hover {
+.bottom-bar .menu-container .menu:hover {
   cursor: pointer;
   background-color: #e4f0ca;
   color: #094337;
   transform: scale(1.1);
   transition: all 0.3s ease-in-out;
 }
-
-.apps {
+.bottom-bar .apps {
   display: flex;
   justify-content: space-around;
   margin: 20px;
 }
-
-.icon-container {
+.bottom-bar .apps .icon-container {
   position: relative;
   display: inline-block;
+}
+.bottom-bar .apps .icon-container .icon {
+  font-size: 3em;
+  cursor: pointer;
+  color: #094337;
+}
+.bottom-bar .apps .icon-container .icon:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+  color: #e77b78;
 }
 
 .tooltip {
@@ -108,18 +112,6 @@ main {
   opacity: 1;
 }
 
-.icon {
-  font-size: 3em;
-  cursor: pointer;
-  color: #094337;
-}
-.icon:hover {
-  cursor: pointer;
-  transform: scale(1.1);
-  transition: all 0.3s ease-in-out;
-  color: #e77b78;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -137,21 +129,39 @@ main {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
-.modal-content {
+.modal .modal-content {
   font-family: "DynaPuff", serif;
   color: #094337;
+  position: relative;
 }
-.modal-content__heading {
+.modal .modal-content__heading {
   text-align: center;
   margin: none;
   font-size: 2em;
 }
-.modal-content #weatherForm {
+
+#weatherForm {
   display: flex;
   flex-direction: column;
 }
-.modal-content #weatherForm #goButton {
+#weatherForm label {
+  margin: 5px;
+  font-size: 1.25em;
+}
+#weatherForm input {
+  background-color: #e4f0ca;
+  font-family: "DynaPuff", serif;
+  margin: 5px;
+  border-radius: 5px;
+  height: 20px;
+  border: solid #094337;
+  color: #094337;
+}
+#weatherForm .button-container {
+  display: flex;
+  justify-content: center;
+}
+#weatherForm .button-container #goButton {
   width: 30%;
   margin: 10px;
   margin-left: 0;
@@ -164,29 +174,13 @@ main {
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
-.modal-content #weatherForm #goButton:hover {
+#weatherForm .button-container #goButton:hover {
   transform: scale(1.1);
   background-color: #e4f0ca;
   color: #094337;
 }
-.modal-content #weatherForm .button-container {
-  display: flex;
-  justify-content: center;
-}
-.modal-content label {
-  margin: 5px;
-  font-size: 1.25em;
-}
-.modal-content input {
-  background-color: #e4f0ca;
-  font-family: "DynaPuff", serif;
-  margin: 5px;
-  border-radius: 5px;
-  height: 20px;
-  border: solid #094337;
-  color: #094337;
-}
-.modal-content #weatherData {
+
+#weatherData {
   display: none;
   background-color: #e77b78;
   color: #e4f0ca;
@@ -196,8 +190,34 @@ main {
 }
 
 .close {
+  position: absolute;
   font-size: 36px;
   cursor: pointer;
+}
+
+#menu-modal .menu-options {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+#menu-modal .menu-options li {
+  display: flex;
+  align-items: center;
+  margin: 15px;
+  font-size: 1.2em;
+  background-color: #e77b78;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+  border-radius: 5px;
+}
+#menu-modal .menu-options li:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#menu-modal .menu-options li i {
+  margin-right: 10px;
+  font-size: 1.5em;
+  color: #094337;
 }
 
 /*# sourceMappingURL=style.css.map */

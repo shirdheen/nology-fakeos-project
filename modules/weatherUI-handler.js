@@ -22,7 +22,7 @@ export const handleWeatherRequest = async () => {
     } else {
       weatherElement.style.display = "none";
     }
-  } catch {
+  } catch (error) {
     console.error("Error in handleWeatherRequest:", error.message);
     weatherDataElement.textContent = `Error: ${error.message}`;
   }
