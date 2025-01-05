@@ -1,5 +1,11 @@
 import { handleWeatherRequest } from "./modules/weatherUI-handler.js";
 import { updateTime } from "./modules/updateTime.js";
+import { openModal } from "./modules/modal-handler.js";
+import { closeModal } from "./modules/modal-handler.js";
+
+const menuButton = document.querySelector(".menu");
+const menuModal = document.getElementById("menu-modal");
+const closeMenuModal = document.getElementById("closeMenuModal");
 
 updateTime();
 
@@ -10,30 +16,25 @@ document.getElementById("weatherForm").addEventListener("submit", (e) => {
 });
 
 document.querySelector(".icon-container").addEventListener("click", () => {
-  document.getElementById("weatherModal").style.display = "block";
+  openModal(document.getElementById("weatherModal"));
 });
 
 document.getElementById("closeModal").addEventListener("click", () => {
-  document.getElementById("weatherModal").style.display = "none";
-
+  closeModal(document.getElementById("weatherModal"));
   weatherForm.reset();
   weatherData.style.display = "none";
 });
 
-const menuButton = document.querySelector(".menu");
-const menuModal = document.getElementById("menu-modal");
-const closeMenuModal = document.getElementById("closeMenuModal");
-
 menuButton.addEventListener("click", () => {
-  menuModal.style.display = "block";
+  openModal(menuModal);
 });
 
 closeMenuModal.addEventListener("click", () => {
-  menuModal.style.display = "none";
+  closeModal(menuModal);
 });
 
 window.addEventListener("click", (event) => {
   if (event.target === menuModal) {
-    menuModal.style.display = "none";
+    closeModal(menuModal);
   }
 });
