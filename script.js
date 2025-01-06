@@ -2,6 +2,7 @@ import { handleWeatherRequest } from "./modules/weatherUI-handler.js";
 import { updateTime } from "./modules/updateTime.js";
 import { openModal } from "./modules/modal-handler.js";
 import { closeModal } from "./modules/modal-handler.js";
+import { dictionaryApp } from "./modules/dictionaryUI-handler.js";
 
 const menuButton = document.querySelector(".menu");
 const menuModal = document.getElementById("menu-modal");
@@ -38,3 +39,5 @@ window.addEventListener("click", (event) => {
     closeModal(menuModal);
   }
 });
+
+dictionaryApp();

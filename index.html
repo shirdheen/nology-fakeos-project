@@ -44,6 +44,10 @@
           <i class="fa-solid fa-cloud icon"></i>
           <span class="tooltip">Weather</span>
         </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-book icon"></i>
+          <span class="tooltip">Dictionary</span>
+        </div>
       </div>
     </footer>
 
@@ -77,6 +81,28 @@
           <li><i class="fa-solid fa-circle-info menu-icons"></i>About</li>
           <li><i class="fa-solid fa-circle-question menu-icons"></i>Help</li>
         </ul>
+      </div>
+    </div>
+
+    <!-- Dictionary Modal -->
+    <div class="modal" id="dict-modal">
+      <div class="modal-content">
+        <span class="close" id="closeDictModal">&times;</span>
+        <h2 class="modal-content__heading">Dictionary</h2>
+        <form id="dictForm">
+          <label for="word">Word</label>
+          <input
+            type="text"
+            id="word"
+            name="word"
+            placeholder="Enter a word"
+            required
+          />
+          <div class="button-container">
+            <button id="searchButton">Search</button>
+          </div>
+        </form>
+        <p id="dictionaryData"></p>
       </div>
     </div>
   </body>

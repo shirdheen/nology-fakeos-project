@@ -34,7 +34,7 @@ main {
 .bottom-bar {
   display: flex;
   background-color: #f9dc54;
-  padding: 10px;
+  padding-left: 10px;
   .menu-container {
     display: flex;
     justify-content: left;
@@ -67,6 +67,7 @@ main {
         font-size: 3em;
         cursor: pointer;
         color: #094337;
+        margin: 10px;
         &:hover {
           cursor: pointer;
           transform: scale(1.1);
@@ -219,4 +220,53 @@ main {
       }
     }
   }
+}
+
+#dictForm {
+  display: flex;
+  flex-direction: column;
+  label {
+    margin: 5px;
+    font-size: 1.25em;
+  }
+  input {
+    background-color: #e4f0ca;
+    font-family: "DynaPuff", serif;
+    margin: 5px;
+    border-radius: 5px;
+    height: 20px;
+    border: solid #094337;
+    color: #094337;
+  }
+  .button-container {
+    display: flex;
+    justify-content: center;
+    #searchButton {
+      width: 30%;
+      margin: 10px;
+      margin-left: 0;
+      background-color: #094337;
+      color: #e4f0ca;
+      font-family: "DynaPuff", serif;
+      border-radius: 10px;
+      padding: 5px;
+      font-size: larger;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.1);
+        background-color: #e4f0ca;
+        color: #094337;
+      }
+    }
+  }
+}
+
+#dictionaryData {
+  display: none;
+  background-color: #e77b78;
+  color: #e4f0ca;
+  font-size: 1.5em;
+  padding: 10px;
+  border-radius: 10px;
 }
