@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fakeOS</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/89994faf41.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <!-- Bar that shows current date and time -->
+    <header class="top-bar">
+      <span id="current-time">Wed 1 Jan 6:24 pm</span>
+    </header>
+
+    <!-- Wallpaper image -->
+    <main class="wallpaper">
+      <div class="logo-container">
+        <img
+          src="./images/pineapple-icon-no-bg.png"
+          alt="fakeOS Logo"
+          class="logo-img"
+        />
+        <p class="logo-text">pineappleOS</p>
+      </div>
+    </main>
+
+    <footer class="bottom-bar">
+      <div class="menu-container">
+        <button class="menu">Menu</button>
+      </div>
+      <div class="apps">
+        <div class="icon-container">
+          <i class="fa-solid fa-cloud icon"></i>
+          <span class="tooltip">Weather</span>
+        </div>
+        <div class="icon-container">
+          <i class="fa-solid fa-book icon"></i>
+          <span class="tooltip">Dictionary</span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Weather Info Modal -->
+    <div class="modal" id="weatherModal">
+      <div class="modal-content">
+        <span class="close" id="closeModal">&times;</span>
+        <h2 class="modal-content__heading">Weather Information</h2>
+        <form id="weatherForm">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" required />
+          <label for="city">State</label>
+          <input type="text" id="state" name="state" required />
+          <label for="city">Country</label>
+          <input type="text" id="country" name="country" required />
+          <div class="button-container">
+            <button id="goButton">Go</button>
+          </div>
+        </form>
+        <p id="weatherData"></p>
+      </div>
+    </div>
+
+    <!-- Menu Modal -->
+    <div class="modal" id="menu-modal">
+      <div class="modal-content">
+        <span class="close" id="closeMenuModal">&times;</span>
+        <h2 class="modal-content__heading">Menu</h2>
+        <ul class="menu-options">
+          <li><i class="fa-solid fa-gear menu-icons"></i> Settings</li>
+          <li><i class="fa-solid fa-circle-info menu-icons"></i>About</li>
+          <li><i class="fa-solid fa-circle-question menu-icons"></i>Help</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Dictionary Modal -->
+    <div class="modal" id="dict-modal">
+      <div class="modal-content">
+        <span class="close" id="closeDictModal">&times;</span>
+        <h2 class="modal-content__heading">Dictionary</h2>
+        <form id="dictForm">
+          <label for="word">Word</label>
+          <input
+            type="text"
+            id="word"
+            name="word"
+            placeholder="Enter a word"
+            required
+          />
+          <div class="button-container">
+            <button id="searchButton">Search</button>
+          </div>
+        </form>
+        <p id="dictionaryData"></p>
+      </div>
+    </div>
+  </body>
+</html>
