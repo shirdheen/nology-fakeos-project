@@ -56,8 +56,6 @@ git clone https://github.com/shirdheen/nology-fakeos-project
 
 ## Bugs to be Fixed
 
-- "Loading..." is not being displayed for the Dictionary API.
-
 ## Future Goals
 
 - Add animations for modals.

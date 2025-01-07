@@ -26,6 +26,9 @@ export const dictionaryApp = () => {
     try {
       dictionaryData.style.display = "block";
       dictionaryData.innerText = "Loading...";
+      console.log("Loading message displayed");
+
+      await new Promise((resolve) => setTimeout(resolve, 2000)); // Delay is introduced so that "Loading..." could be displayed
 
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
