@@ -1,3 +1,5 @@
+import { openModal, closeModal } from "./modal-handler.js";
+
 export const dictionaryApp = () => {
   const dictionaryIcon = document.querySelector(".fa-book");
   const dictionaryModal = document.getElementById("dict-modal");
@@ -6,12 +8,13 @@ export const dictionaryApp = () => {
   const dictionaryData = document.getElementById("dictionaryData");
 
   dictionaryIcon.addEventListener("click", () => {
-    dictionaryModal.style.display = "block";
+    openModal(dictionaryModal);
   });
 
   closeDictionaryModal.addEventListener("click", () => {
-    dictionaryModal.style.display = "none";
+    closeModal(dictionaryModal);
     dictionaryData.textContent = "";
+    dictionaryData.style.display = "none";
     dictionaryForm.reset();
   });
 
@@ -19,9 +22,11 @@ export const dictionaryApp = () => {
     e.preventDefault();
 
     const word = document.getElementById("word").value.trim();
-    dictionaryData.textContent = "Loading...";
 
     try {
+      dictionaryData.style.display = "block";
+      dictionaryData.innerText = "Loading...";
+
       const response = await fetch(
         `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
       );
@@ -38,7 +43,8 @@ export const dictionaryApp = () => {
         .join("<br>");
       console.log("Definitions: ", definitions);
       if (definitions) {
-        dictionaryData.innerText = `<strong>${word}</strong><br>${definitions}`; // Word will be bold, and the definitions will begin on the next line
+        dictionaryData.style.display = "block";
+        dictionaryData.innerHTML = `<strong>${word}</strong><br>${definitions}`; // Word will be bold, and the definitions will begin on the next line
       } else {
         dictionaryData.style.display = "none";
       }

@@ -8,7 +8,11 @@ const menuButton = document.querySelector(".menu");
 const menuModal = document.getElementById("menu-modal");
 const closeMenuModal = document.getElementById("closeMenuModal");
 
+// Updating time at the top
+
 updateTime();
+
+// Weather API
 
 document.getElementById("weatherForm").addEventListener("submit", (e) => {
   e.preventDefault();
@@ -26,6 +30,8 @@ document.getElementById("closeModal").addEventListener("click", () => {
   weatherData.style.display = "none";
 });
 
+// Menu button
+
 menuButton.addEventListener("click", () => {
   openModal(menuModal);
 });
@@ -39,5 +45,7 @@ window.addEventListener("click", (event) => {
     closeModal(menuModal);
   }
 });
+
+// Dictionary API
 
 dictionaryApp();

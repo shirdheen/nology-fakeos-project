@@ -54,6 +54,10 @@ git clone https://github.com/shirdheen/nology-fakeos-project
 - The project is not fully responsive for mobile. It has been currently design for desktop purposes only.
 - There are no animations for when the modals are opened.
 
+## Bugs to be Fixed
+
+- "Loading..." is not being displayed for the Dictionary API.
+
 ## Future Goals
 
 - Add animations for modals.
